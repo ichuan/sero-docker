@@ -8,4 +8,4 @@ ENV DYLD_LIBRARY_PATH=/opt/coin/czero/lib/ LD_LIBRARY_PATH=/opt/coin/czero/lib/
 # cleanup
 RUN apt autoremove -y && rm -rf /var/lib/apt/lists/*
 
-ENTRYPOINT ["bin/gero", "--config", "./geroConfig.toml", "--exchange", "--rpc", "--rpcaddr", "0.0.0.0", "--rpcport", "8545", "--rpcapi", "flight,local,sero,exchange", "--syncmode", "fast", "--gcmode", "full"]
+ENTRYPOINT ["bin/gero", "--config", "./geroConfig.toml", "--exchange", "--mineMode", "--rpc", "--rpcaddr", "0.0.0.0", "--rpcport", "8545", "--rpcapi", "flight,local,sero,exchange"]
